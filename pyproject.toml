@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "screwpam"
+version = "0.1.0"
+description = "Phonon angular momentum and screw-axis pseudo-angular momentum from phonopy"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ali Ghojavand" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "phonopy>=2.20", "spglib"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+screwpam = "screwpam.cli:main"
+
+[tool.setuptools]
+packages = ["screwpam"]
